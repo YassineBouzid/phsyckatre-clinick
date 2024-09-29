@@ -1064,8 +1064,8 @@ if __name__ == '__main__':
     
     # Uncomment to create a new user (only needs to be done once for initial setup)
 
-    hashed_password = bcrypt.hashpw("baroud".encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
-    admin = User(id=1,username= "admin", password_hash=hashed_password)
+    hashed_password = bcrypt.hashpw("xxxxxxxxxxxxxxxx".encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
+    admin = User(id=1,username= "xxxxxxxxxxxxx", password_hash=hashed_password)
     admin_in_database = session.query(User).filter_by(id=admin.id).first()
     if admin_in_database == None:
         new_user = User(username="admin", password_hash=hashed_password)
