@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>تقرير المريض</title>
+    <style>
+        body {
+            font-family: 'Amiri', serif;
+           
+            text-align: right;
+        }
+        
+        h1 {
+            font-size: 22px;
+            color: #006699;
+            text-align: center;
+            border-bottom: 2px solid #006699;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            font-size: 14px;
+            margin-top: 24px;
+        }
+        p {
+            font-size: 12px;
+            line-height: 1.6;
+        }
+        .signature {
+            text-align: left;
+            margin-top: 10px;
+        }
+        .signature img {
+            width: 75px;
+            height: 75px;
+        }
+        .section {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>عيادة بارود</h1>
+<p>تاريخ التقرير: {{ report_date }}</p>
+
+<div class="section">
+    <h2>معلومات المريض</h2>
+    <h2>الاسم واللقب: </h2>
+       <p> {{ patient_name }}</p>
+    <h2>السن:</h2> <p>{{ patient_age }}</p>
+    <h2>الجنس:</h2><p> {{ patient_sex }}</p>
+    <h2>المستوى الدراسي: </h2><p>{{ patient_education }}</p>
+    <h2>العنوان:</h2> <p>{{ patient_address }}</p>
+</div>
+
+
+
+<div class="section">
+    <h2>سبب الزيارة</h2>
+    <p>{{ reason_visit }}</p>
+</div>
+
+<div class="section">
+    <h2>التاريخ المرضي</h2>
+    <p>{{ history_illness }}</p>
+</div>
+
+<div class="section">
+    <h2>جهة الاحالة</h2>
+    <p>{{ from_whom }}</p>
+</div>
+
+<div class="section">
+    <h2>التاريخ النفسي والعقلي والعصبي</h2>
+    <p>{{ psychiatric_history }}</p>
+</div>
+
+<div class="section">
+    <h2>المتابعات الإكلينيكية</h2>
+    <p>{{ clinic_follow }}</p>
+</div>
+
+<div class="section">
+    <h2>التشخيص</h2>
+    <p>{{ diagnosis }}</p>
+</div>
+
+<div class="section">
+    <h2>التوجيهات واقتراحات</h2>
+    <p>{{ propositions_directing }}</p>
+</div>
+
+<div class="section">
+    <h2>الخطة العلاجية</h2>
+    <p>{{ curing_program }}</p>
+</div>
+
+<div class="section">
+    <h2>التقييم</h2>
+    <p>{{ evaluation }}</p>
+</div>
+
+<div class="section">
+    <h2>التقرير</h2>
+    <p>{{ reporting }}</p>
+</div>
+
+<div class="section">
+    <h2>تاريخ الزيارة المقبلة </h2>
+    <p>{{ next_visit }}</p>
+</div>
+
+ <br>
+<div class="signature">
+    <h2>توقيع الطبيب:</h2>
+ <img src="static/signature.png" alt="Doctor's Signature">
+        
+</div>
+
+</body>
+</html>
